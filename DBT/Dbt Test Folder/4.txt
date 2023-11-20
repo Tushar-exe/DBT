@@ -1,0 +1,8 @@
+
+
+ select deptno, count(deptno)R from emp group by deptno order by r limit 1;
++--------+---+
+| deptno | R |
++--------+---+
+|     50 | 3 |
++--------+---+

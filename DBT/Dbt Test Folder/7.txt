@@ -1,0 +1,6 @@
+select (select sum(total)R1 from ord where status="shipped")-(select sum(total)R2 from ord where status="Cancelled")as difference;
++------------+
+| difference |
++------------+
+|   43049.60 |
++------------+

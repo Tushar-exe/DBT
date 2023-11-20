@@ -1,0 +1,58 @@
+select e.*,ec.name from emp e inner join emp_cards ec on e.empno=ec.empid where name in ('aadhaar','voter id','driving licence','pan','debit','credit');
+
+
+
++-------+--------+--------+-----------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+-----------------+
+| EMPNO | ENAME  | GENDER | JOB       | MGR  | HIREDATE   | SAL  | COMM | DEPTNO | BONUSID | USER NAME    | PWD        | PHONE      | isActive | name            |
++-------+--------+--------+-----------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+-----------------+
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | Aadhaar         |
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | Driving Licence |
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | PAN             |
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | Voter ID        |
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | Debit           |
+|  7839 | KING   | M      | PRESIDENT | NULL | 1981-11-17 | 5000 | NULL |     10 |       1 | KING         | r50mpm     | 7132300081 |        1 | Credit          |
+|  7698 | BLAKE  | M      | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 | Aadhaar         |
+|  7698 | BLAKE  | M      | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 | Driving Licence |
+|  7698 | BLAKE  | M      | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 | PAN             |
+|  7698 | BLAKE  | M      | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 | Voter ID        |
+|  7698 | BLAKE  | M      | MANAGER   | 7839 | 1981-05-01 | 2850 | NULL |     30 |       1 | BIG BEN      | sales@2017 | 7132300027 |        1 | Debit           |
+|  7782 | CLARK  | M      | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 | Aadhaar         |
+|  7782 | CLARK  | M      | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 | Driving Licence |
+|  7782 | CLARK  | M      | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 | PAN             |
+|  7782 | CLARK  | M      | MANAGER   | 7839 | 1981-06-09 | 2450 | NULL |     10 |       3 | CLARK        | r50mpm     | 7032300001 |        1 | Debit           |
+|  7566 | JONES  | M      | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 | Aadhaar         |
+|  7566 | JONES  | M      | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 | Driving Licence |
+|  7566 | JONES  | M      | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 | PAN             |
+|  7566 | JONES  | M      | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 | Debit           |
+|  7566 | JONES  | M      | MANAGER   | 7839 | 1981-04-02 | 2975 | NULL |     20 |       4 | HONEYCOMB    | a12recmpm  | 7132300039 |        1 | Credit          |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | Aadhaar         |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | Driving Licence |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | PAN             |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | Voter ID        |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | Debit           |
+|  7654 | MARTIN | M      | SALESMAN  | 7698 | 1981-09-28 | 1250 | 1400 |     30 |       6 | LIFE RACER   | sales@2017 | 7132300050 |        1 | Credit          |
+|  7499 | ALLEN  | M      | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 | PAN             |
+|  7499 | ALLEN  | M      | SALESMAN  | 7698 | 1981-02-20 | 1600 |  300 |     30 |       4 | ALWAYS TESTE | sales@2017 | 7032300096 |        1 | Driving Licence |
+|  7844 | TURNER | M      | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 | Aadhaar         |
+|  7844 | TURNER | M      | SALESMAN  | 7698 | 1981-09-08 | 1500 |    0 |     30 |       5 | SAND DUST    | sales@2017 | NULL       |        1 | Driving Licence |
+|  7900 | JAMES  | M      | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 | Aadhaar         |
+|  7900 | JAMES  | M      | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 | Driving Licence |
+|  7900 | JAMES  | M      | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 | PAN             |
+|  7900 | JAMES  | M      | CLERK     | 7698 | 1981-12-03 |  950 | NULL |     30 |       2 | CRAZY LEADER | sales@2017 | 7132300042 |        1 | Voter ID        |
+|  7521 | WARD   | M      | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 | Driving Licence |
+|  7521 | WARD   | M      | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 | PAN             |
+|  7521 | WARD   | M      | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 | Debit           |
+|  7521 | WARD   | M      | SALESMAN  | 7698 | 1981-02-22 | 1250 |  500 |     30 |       1 | WARD         | sales@2017 | 7132300034 |        1 | Credit          |
+|  7902 | FORD   | M      | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 | Aadhaar         |
+|  7902 | FORD   | M      | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 | PAN             |
+|  7902 | FORD   | M      | ANALYST   | 7566 | 1981-12-03 | 3000 | NULL |     20 |       4 | CONBRIO      | a12recmpm  | NULL       |        0 | Voter ID        |
+|  7369 | SMITH  | M      | CLERK     | 7902 | 1980-12-17 |  800 | NULL |     20 |       2 | TRITONE      | a12recmpm  | 7032300023 |        0 | Aadhaar         |
+|  7788 | SCOTT  | M      | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 | Aadhaar         |
+|  7788 | SCOTT  | M      | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 | Driving Licence |
+|  7788 | SCOTT  | M      | ANALYST   | 7566 | 1982-12-09 | 3000 | NULL |     20 |       3 | WHITE SAND   | a12recmpm  | NULL       |        1 | PAN             |
+|  7876 | ADAMS  | M      | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 | Aadhaar         |
+|  7876 | ADAMS  | M      | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 | Driving Licence |
+|  7876 | ADAMS  | M      | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 | PAN             |
+|  7876 | ADAMS  | M      | CLERK     | 7788 | 1983-01-12 | 1100 | NULL |     20 |       1 | CRAZY ANYONE | a12recmpm  | 7132300086 |        1 | Voter ID        |
++-------+--------+--------+-----------+------+------------+------+------+--------+---------+--------------+------------+------------+----------+-----------------+
+49 rows in set (0.00 sec)

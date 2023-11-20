@@ -1,0 +1,13 @@
+select ename ,job ,sal from emp where job in ('clerk','analyst') and sal not in(1000,3000,5000);
++---------+---------+------+
+| ename   | job     | sal  |
++---------+---------+------+
+| SMITH   | CLERK   |  800 |
+| AARAV   | CLERK   | 3350 |
+| THOMAS  | CLERK   | 1750 |
+| ADAMS   | CLERK   | 1100 |
+| JAMES   | CLERK   |  950 |
+| MILLER  | CLERK   | 1300 |
+| NATASHA | CLERK   | 1750 |
+| SUPRIYA | ANALYST | 1750 |
++---------+---------+------+
